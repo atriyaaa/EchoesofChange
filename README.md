@@ -1,11 +1,15 @@
-#Echoes of Change is a Django-based web platform built to support UN SDG3 (Good Health & Well-being) and SDG10 (Reduced Inequalities). It intelligently matches volunteers with initiatives based on their skills and interests. Key features include:
+🌍 Echoes of Change
+Echoes of Change is a Django-based web platform designed to support the UN's Sustainable Development Goals (SDG3: Good Health & Well-being, SDG10: Reduced Inequalities). It matches volunteers with initiatives aligned to their skills and interests, while promoting measurable and gamified community impact.
 
-Real-time impact scores to visualize contribution
+🚀 Key Features
+🔄 Real-time impact scores to visualize contributions
+🏆 Gamified leaderboard to encourage participation
+🕒 Timesheet logging to track volunteer hours
+🗺️ Google Maps API integration for location-based volunteering
+🔐 User authentication powered by Django’s built-in system
 
-A gamified leaderboard to boost engagement
-
-Timesheet logging to track volunteer hours
-
-Google Maps API for location-based volunteering
-
-Built with JavaScript (Vanilla) on the frontend and Django (including its built-in authentication system) on the backend
+🛠️ Tech Stack
+Frontend: JavaScript (Vanilla)
+Backend: Django (Python)
+APIs: Google Maps API, Gemini API
+Authentication: Django’s built-in auth system
