@@ -18,6 +18,7 @@ gunicorn==25.3.0
 hyperlink==21.0.0
 idna==3.13
 Incremental==24.11.0
+libsass==0.23.0
 msgpack==1.1.2
 ndg-httpsclient==0.5.1
 packaging==26.2
