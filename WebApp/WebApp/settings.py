@@ -210,10 +210,15 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = BASE_DIR /'WebApp/static'
-SASS_PROCESSOR_ROOT = STATIC_ROOT
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+SASS_PROCESSOR_ROOT = BASE_DIR / "static"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_FINDERS = [
