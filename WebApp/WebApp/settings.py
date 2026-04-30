@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-ey6750kbrm3h3rm-$c=e(_eil7#q55553^-#4-&xz&1x%ixwmd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
 
 # Application definition
@@ -97,6 +97,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware', 
+    "whitenoise.middleware.WhiteNoiseMiddleware",
    
 ]
 
@@ -116,8 +117,8 @@ SOCIALACCOUNT_PROVIDERS = {
             'email'
         ],
         'APP': {
-            'client_id': os.environ['CLIENT_ID'],
-            'secret': os.environ['CLIENT_SECRET'],
+            'client_id': os.getenv('CLIENT_ID', ""),
+            'secret': os.getenv('CLIENT_SECRET', ""),
         },
         'AUTH_PARAMS': {
             'access_type':'online',
@@ -211,6 +212,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = BASE_DIR /'WebApp/static'
 SASS_PROCESSOR_ROOT = STATIC_ROOT
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_FINDERS = [
 'django.contrib.staticfiles.finders.FileSystemFinder',
